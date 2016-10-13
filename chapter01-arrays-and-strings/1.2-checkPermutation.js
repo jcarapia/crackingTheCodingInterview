@@ -41,6 +41,6 @@ function checkPermutation(str1, str2){
 	return true;
 };
 
-console.log(checkPermutation('abc','cab')) //true
+console.log(checkPermutation('bac','cab')) //true
 console.log(checkPermutation('abc','cib')) //false
 
