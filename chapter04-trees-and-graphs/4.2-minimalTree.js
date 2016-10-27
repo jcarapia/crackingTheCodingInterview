@@ -29,7 +29,7 @@ satisfy this requirement when called recursively! :)
 */
 
 
-var array = [1, 2, 3, 4, 5, 6]//, 7, 8, 9, 10];
+var array = [1, 2, 3, 4, 5, 6, 7]//, 8, 9, 10];
 
 var Tree = function (value){
 	this.value = value; 
@@ -58,7 +58,29 @@ function minimalBST(array){
 	return tree;
 };
 
-console.log(minimalBST(array)) //PASS!
+var myTree = minimalBST(array) //PASS!
+console.log(myTree)
+
+function inOrderPrint(tree){
+
+	if(tree !== null){
+		inOrderPrint(tree.left)
+		console.log(tree.value)
+		inOrderPrint(tree.right)
+	};
+};
+
+//inOrderPrint(myTree)
+
+function preOrderPrint(tree){
+	if(tree !== null){
+		console.log(tree.value);
+		preOrderPrint(tree.left);
+		preOrderPrint(tree.right);
+	}
+};
+
+preOrderPrint(myTree)
 
 //Tree.prototype.insert = function(value){
 // 	//create and save the new node to a variable
