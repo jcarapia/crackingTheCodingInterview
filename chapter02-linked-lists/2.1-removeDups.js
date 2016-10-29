@@ -35,6 +35,7 @@ LinkedList.prototype.addToList = function(value){
 };
 
 LinkedList.prototype.removeNode = function(value){
+	
 	if(this.head.value === value){
 		this.head = this.head.next;
 		return null;
@@ -42,6 +43,7 @@ LinkedList.prototype.removeNode = function(value){
 
 	var currentNode = this.head.next;
 	var previousNode = this.head;
+
 	while(currentNode){
 		if(currentNode.value === value){
 			previousNode.next = currentNode.next
@@ -52,20 +54,36 @@ LinkedList.prototype.removeNode = function(value){
 	}
 };
 
-
-
-
 var myList = new LinkedList();
 myList.addToList(1)
 myList.addToList(2)
 myList.addToList(3)
-myList.removeNode(1)
+myList.addToList(3)
+//myList.removeNode(1)
 
-console.log(myList)
+//console.log(myList)
 
-//1 the linked list is empty
-//2 the linked list has only one value 
-//3 the linked list has more than one value 
+function iterateThroughList(linkedList) {
+	var nodeValues = {};
+	var currentNode = linkedList.head;
+	while(currentNode){
+		nodeValues[currentNode.value] = (currentNode.value);
+		currentNode = currentNode.next;
+	};
+
+	var tempList = new LinkedList();
+
+	for(var key in nodeValues){
+		tempList.addToList(nodeValues[key]);
+	};
+
+	return tempList;
+};
+
+//This function creates a new list without dupes. The old list 
+//can be reassigned to this list if replacement is required. 
+
+console.log(iterateThroughList(myList))
 
 
 

@@ -1,0 +1,9 @@
+function iterateThroughList(linkedList) {
+	var nodeValues = [];
+	var currentNode = linkedList.head;
+	while(currentNode){
+		nodeValues.push(currentNode.value);
+		currentNode = currentNode.next;
+	}
+	return nodeValues;
+}
