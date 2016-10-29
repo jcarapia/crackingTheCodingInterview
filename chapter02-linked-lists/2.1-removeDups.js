@@ -58,12 +58,13 @@ var myList = new LinkedList();
 myList.addToList(1)
 myList.addToList(2)
 myList.addToList(3)
-myList.addToList(3)
+myList.addToList(4)
+myList.addToList(5)
 //myList.removeNode(1)
 
 //console.log(myList)
 
-function iterateThroughList(linkedList) {
+function removeDupes(linkedList) {
 	var nodeValues = {};
 	var currentNode = linkedList.head;
 	while(currentNode){
@@ -83,7 +84,33 @@ function iterateThroughList(linkedList) {
 //This function creates a new list without dupes. The old list 
 //can be reassigned to this list if replacement is required. 
 
-console.log(iterateThroughList(myList))
+//console.log(removeDupes(myList));
+
+//===============================
+function returnKthToLast (linkedList, k){
+	var counter1 = 0; //length of linked list
+	var counter2 = 0;	//position kth from last node
+	var resultNode = linkedList.head;
+
+	var currentNode = linkedList.head;
+
+	while(currentNode){
+		counter1++;
+		currentNode = currentNode.next;
+	};
+
+	counter2 = counter1 - k;
+	
+
+	while(counter2 > 1){
+		resultNode = resultNode.next;
+		counter2--;
+	};
+
+	return resultNode;
+};
+
+console.log(returnKthToLast(myList, 1))
 
 
 
