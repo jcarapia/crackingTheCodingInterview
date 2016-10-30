@@ -87,30 +87,7 @@ function removeDupes(linkedList) {
 //console.log(removeDupes(myList));
 
 //===============================
-function returnKthToLast (linkedList, k){
-	var counter1 = 0; //length of linked list
-	var counter2 = 0;	//position kth from last node
-	var resultNode = linkedList.head;
 
-	var currentNode = linkedList.head;
-
-	while(currentNode){
-		counter1++;
-		currentNode = currentNode.next;
-	};
-
-	counter2 = counter1 - k;
-	
-
-	while(counter2 > 1){
-		resultNode = resultNode.next;
-		counter2--;
-	};
-
-	return resultNode;
-};
-
-console.log(returnKthToLast(myList, 1))
 
 
 
