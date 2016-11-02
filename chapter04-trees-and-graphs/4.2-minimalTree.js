@@ -46,7 +46,7 @@ function minimalBST(array){
 	};
 
 	var middleIndex = Math.floor(array.length / 2);
-	var root = array.splice(middleIndex, 1)[0];
+	var root = array.splice(middleIndex, 1)[0]; // do slice
 	var leftArray = array.slice(0, middleIndex);
 	var rightArray = array.slice(middleIndex);
 
