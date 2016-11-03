@@ -85,11 +85,11 @@ Stack.prototype.length = function(){
 
 
 var mySet = new SetOfStacks();
-mySet.push(1) //new stack0 is made, counter 0, stacks = 1
-mySet.push(2) //    stack0          counter 0, stacks = 1
-mySet.push(3) //new stack1 is made, counter 0, stacks = 1
-mySet.push(4)	//		stack1          counter 1, stacks = 2
-mySet.push(5) //    stack2 is made 
+mySet.push(1) 
+mySet.push(2) 
+mySet.push(3) 
+mySet.push(4)	
+mySet.push(5) 
 mySet.push(6)
 mySet.push(7)
 mySet.pop()
