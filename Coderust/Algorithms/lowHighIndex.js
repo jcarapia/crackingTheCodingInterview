@@ -16,3 +16,47 @@ var sampleArray = [1, 2, 5, 5, 5, 5, 5, 5, 5, 5, 20];
 
 Use Binary Search
 */
+
+//use binary search once to find the lowest value 
+//use a second binary search to find the highest value
+
+var testArray = [1, 2, 5, 5, 5, 25, 5, 5, 5, 5, 20];
+
+let find_low_index = function(arr, key){
+	let low = 0; 
+	let high = arr.length-1;
+	let mid = Math.floor(high/2);
+
+	while(low <= high){
+		let mid_elem = arr[mid];
+		console.log(low, high, mid_elem)
+
+		if(mid_elem < key){
+			low = mid + 1;
+		} else {
+			high = mid-1;
+		}
+
+		mid = low + Math.floor((high-low)/2);
+
+	}
+
+	if(arr[low] === key){
+		return low;
+	}
+	return -1
+}
+
+console.log(find_low_index(testArray, 25))
+
+
+
+
+
+
+
+
+
+
+
+
