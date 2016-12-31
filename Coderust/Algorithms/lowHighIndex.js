@@ -75,14 +75,3 @@ let find_high_index = function(arr, key) {
 
 console.log(find_high_index(testArray, 6))
 
-
-//
-
-
-
-
-
-
-
-
-
