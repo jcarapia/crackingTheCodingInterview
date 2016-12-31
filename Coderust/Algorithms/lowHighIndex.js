@@ -29,7 +29,7 @@ let find_low_index = function(arr, key){
 
 	while(low <= high){
 		let mid_elem = arr[mid];
-		console.log(low, high, mid_elem)
+		
 
 		if(mid_elem < key){
 			low = mid + 1;
@@ -38,7 +38,7 @@ let find_low_index = function(arr, key){
 		}
 
 		mid = low + Math.floor((high-low)/2);
-
+		console.log(low, high, mid)
 	}
 
 	if(arr[low] === key){
