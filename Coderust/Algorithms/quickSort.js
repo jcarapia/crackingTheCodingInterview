@@ -9,3 +9,7 @@ Sorted array: [2, 23, 25, 26, 55];
 Time complexity: n*log(n);
 
 */
+
+function quickSort(array, low, high) {
+
+}
