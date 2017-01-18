@@ -1,4 +1,4 @@
-var sample_input = '{([])}';
+var sample_input = '{}()[]';
 
 
 var balancedParens = function(input) {
@@ -16,11 +16,14 @@ var balancedParens = function(input) {
 		if(pairs[char]){
 			stack.push(char)
 		} else if (char === '}' || char === ']' || char === ')') {
-			if(pairs[stack.pop()] !== char) {
+			console.log(stack)
+			//console.log(stack)
+			if(pairs[stack[stack.length-1]] !== char) {
 				return false
 			}
-			console.log(stack)
+			stack.pop()
 		}
+
 	}
 	return stack.length === 0;
 }
