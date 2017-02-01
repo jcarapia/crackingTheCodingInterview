@@ -36,6 +36,7 @@ var input_two = "We promptly judged antique ivory buckles for the prize";
 
 function pangram(sentence) {
 
+	var sentence = sentence.toLowerCase();
 	var hash = {};
 	var char;
 
