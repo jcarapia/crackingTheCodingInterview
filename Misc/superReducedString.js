@@ -18,22 +18,24 @@ output = 'abc'
 
 */
 
-var input = 'aabbbccddd';
+var input = 'baabaabaab';
 
 function superReducedString(string) {
 	for(var i = 0; i < string.length; i++) {
 		if(string[i] === string[i+1]) {
 			string = string.slice(0,i) + string.slice(i+2) //remove ith plus i+1th
-			i = i - 1; // take into account that an element was removed so do not advance or an element will
+			i = 0; // take into account that an element was removed so do not advance or an element will
 								 // be skipped
 		}
 	};
 
-	if(string.length === 0) {
+	if(string.length === 2 && string[0] === string[1]) {
 		console.log('EMPTY STRING');
+	} else if(string.length === 0) {
+		console.log('EMPTY STRING');
+	} else {
+		console.log(string);
 	};
-
-	console.log(string);
 }
 				// 0 to element before 2 + third to last
  // input = input.slice(0,2) + input.slice(3)
