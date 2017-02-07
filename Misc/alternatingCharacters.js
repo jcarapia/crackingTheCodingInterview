@@ -38,18 +38,21 @@ AAABBB  AB, 4 deletions because to convert it to AB we need to delete 2 A's and 
 
 function alternatingCharacters(string) {
 
+	var count = 0;
+
 	if(string.length === 1) {
-		return string;
+		return count;
 	};
 
 	for(var i = 1; i < string.length; i++) {
 		if(string[i-1] === string[i]) {
 			string = string.slice(0,i) + string.slice(i+1);
+			count++;
 			i--
 		}
 	};
 	
-	return string;
+	return count;
 };
 
 console.log(alternatingCharacters('AAABBB'))
