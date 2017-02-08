@@ -66,5 +66,3 @@ console.log(alternatingCharacters('AAABBB'))
 
 
 
-
-
