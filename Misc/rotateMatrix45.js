@@ -37,18 +37,6 @@ function rotateMatrix45(matrix) {
 		}
 	}
 
-	// var start = 0 - (matrix.length -1);
-	// var end = matrix.length + 1; //inclusive of this value
-
-	// for(i = start; i < end; i++) {
-	// 	for(j = matrix.length - 1; j >= 0; j--) {
-	// 		var temp = [];
-	// 		if(matrix[j][i - (j-(matrix.length-1))]){
-	// 			//console.log([j, i - (j-(matrix.length-1))])
-	// 			console.log(matrix[j][i - (j-(matrix.length-1))])
-	// 		}
-	// 	}
-	// }
 	return results;
 };
 
