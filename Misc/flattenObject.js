@@ -81,25 +81,7 @@ var o = {
 
 
 console.log(flattenObject(o))
-//console.log(flattenObject({'a': 1, 'b': {'c': {'d':2}}, 'e': {'f': 3, 'g': 4}}))
 
-// function flatten(string, object) {
-
-// 	var flat_key;
-
-// 	for(var key in object) {
-// 		if(typeof(object[key]) === 'object') {
-// 			flat_key = string + '.' + key;
-// 			return flatten(flat_key, object[key]);
-// 		} else {
-// 			flat_key = string + '.' + key;
-// 			var obj = {}
-// 			obj[flat_key] = object[key];
-// 			console.log('the flat obj', obj)
-// 			return obj
-// 		}
-// 	}
-// };
 
 
 
