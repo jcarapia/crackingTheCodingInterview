@@ -20,37 +20,54 @@
  *												8
  */
 
- function nthFibonacci(n) {
- 	
- 	if(n <= 2) {
- 		return 1;
- 	}
+function nthFibonacci(n) {
 
- 	return nthFibonacci(n-2) + nthFibonacci(n-1);
- };
+	if(n === 1) {
+		return 0
+	} else if(n <= 2) {
+		return 1;
+	} else {
+		return nthFibonacci(n-2) + nthFibonacci(n-1);
+	}
 
-// console.log(nthFibonacci(7))
+};
+
+console.log(nthFibonacci(7))
 
 
-function iterate_fib(n) {
-	var a = 1; 
-	var b = 1; 
-	var c;
+function iterateFibonacci(n) {
 
-	if(n <=2) {
+	if(n === 1){
+		return 0;
+	} else if(n <= 2){
 		return 1;
 	};
 
-	for(var i = 3; i <= n ; i++) {
-		var c = a + b;
-		a = b; 
+	var a = 0;
+	var b = 1;
+	var c;
+
+	for(var i = 3; i <=n; i++) {
+		c = a+b;
+		a = b;
 		b = c;
 	}
-
 	return c;
 };
 
-console.log(iterate_fib(7))
+console.log(iterateFibonacci(7))
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
