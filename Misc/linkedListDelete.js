@@ -32,7 +32,7 @@ Node.prototype.deleteNode = function(value) {
 		currentNode = currentNode.next;
 
 	};
-	return this
+	
 };
 
 
