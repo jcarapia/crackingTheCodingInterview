@@ -48,17 +48,23 @@ BinarySearchTree.prototype.contains = function(value) {
 };
 
 BinarySearchTree.prototype.depthFirstLog = function() {
-//Depth-first in-order
 
+	//console.log(this.value) //pre-order
 	if(this.left){
 		this.left.depthFirstLog();
 	}
 
-	console.log(this.value);
+	console.log(this.value); // in order 
 
 	if(this.right){
 		this.right.depthFirstLog();
 	};
+	//console.log(this.value) //post-order
+};
+
+BinarySearchTree.prototype.nextInOrderSuccessor = function(value) {
+
+
 };
 
 var myTree = new BinarySearchTree(1);
@@ -68,8 +74,8 @@ myTree.insert(4);
 myTree.insert(3);
 myTree.insert(5);
 
-console.log(myTree)
-console.log(myTree.contains(3))
+//console.log(myTree)
+//console.log(myTree.contains(3))
 myTree.depthFirstLog()
 
 
