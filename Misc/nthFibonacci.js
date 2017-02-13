@@ -32,7 +32,7 @@ function nthFibonacci(n) {
 
 };
 
-console.log(nthFibonacci(7))
+//console.log(nthFibonacci(7))
 
 
 function iterateFibonacci(n) {
