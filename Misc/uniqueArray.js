@@ -11,8 +11,7 @@ function uniqueArray(array) {
 		if(!container[array[i]]){
 			container[array[i]] = 1;
 			uniqueArray.push(array[i]);
-
-		}
+		};
 	}
 	//return Object.keys(container);
 	return uniqueArray; //this method maintains the type of element in the original array
