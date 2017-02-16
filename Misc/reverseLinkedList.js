@@ -79,22 +79,22 @@ function reverseLinkedList(linkedList) {
 //console.log(reverseLinkedList(myList))
 
 function inplaceReverse(linkedList) {
-	
-var currentNode = linkedList.head; 
-var nextNode = null;
-var previousNode = null; 
 
-while(currentNode !== null) {
-	nextNode = currentNode.next;
-	currentNode.next = previousNode;
-	previousNode = currentNode;
-	currentNode = nextNode;
-}
+	var currentNode = linkedList.head;
+	var nextNode = null;
+	var prevNode = null;
 
-linkedList.head = previousNode;
-return linkedList;
+	while(currentNode) {
+		nextNode = currentNode.next;
+		currentNode.next = prevNode;
+		prevNode = currentNode;
+		currentNode = nextNode;
+	};
 
+	linkedList.head = prevNode;
+	return linkedList;
 };
+
 
 console.log(inplaceReverse(myList))
 

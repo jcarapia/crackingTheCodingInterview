@@ -50,6 +50,6 @@ function getRandomIntInclusive(min, max) {
   return (Math.random() * (max - min + 1)) + min;
 }
 
-console.log(getRandomIntInclusive(4,5))
+console.log(getRandomIntInclusive(4,5));
 
 
