@@ -122,7 +122,7 @@ grandparent.addChild(parent3)
 parent1.addChild(child1)
 parent1.addChild(child2)
 //console.log(grandparent)
-console.log(parent1.countLeaves())
+console.log(parent.countLeaves())
 
 
 
