@@ -32,10 +32,11 @@ function flattenObject(object) {
 	
 	for(var key in object) {
 		if( typeof(object[key]) === 'object') {
-			 flat_obj = flatten(key, object[key]);
-			 for(var key in flat_obj) {
-			 	results[key] = flat_obj[key];
-			 }
+			 //flat_obj = 
+			 flatten(key, object[key]);
+			 //for(var key in flat_obj) {
+			 	//results[key] = flat_obj[key];
+			 //}
 		} else {
 			results[key] = object[key];
 		}

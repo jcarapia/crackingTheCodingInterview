@@ -42,8 +42,8 @@ var nodeA = Node('A');
 var nodeB = nodeA.next = Node('B');
 var nodeC = nodeB.next = Node('C');
 var nodeD = nodeC.next = Node('D');
-var nodeE = nodeD.next = Node('E'); 
-nodeE.next = nodeB;
+//var nodeE = nodeD.next = Node('E'); 
+//nodeE.next = nodeB;
 
 //console.log(nodeA)
 
@@ -57,7 +57,7 @@ function linkedListLoop(linkedList) {
 	var tortoise = linkedList;
 	var hare = linkedList.next;
 
-	while(tortoise && hare) {
+	while(tortoise && hare && hare.next) {
 
 		if(tortoise.value === hare.value) {
 			return true
