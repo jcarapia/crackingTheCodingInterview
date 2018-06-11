@@ -21,4 +21,4 @@ function unique(str){
 console.log(unique(testString1)); //true
 console.log(unique(testString2)); //false
 
-//test
+//test2
